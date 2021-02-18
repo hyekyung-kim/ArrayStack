@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 class Stack{
     int top;
@@ -54,14 +55,13 @@ class Stack{
               System.out.print(i + " ");
           }
         }
-        System.out.println("");
+        System.out.println();
     }
 
     public void printStack(){
         System.out.println("0 ~ " + top);
-        for(int i = 0; i < top; i++){
-            System.out.print(array[i] + " ");
-        }
+        IntStream.range(0, top).forEach((int i)
+                -> System.out.print(array[i] + " "));
         System.out.println();
     }
 }
